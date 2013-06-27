@@ -1,0 +1,235 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		370A975017747C1C00D44464 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 370A974F17747C1C00D44464 /* Foundation.framework */; };
+		370A975617747C1C00D44464 /* AirPrintANE.m in Sources */ = {isa = PBXBuildFile; fileRef = 370A975517747C1C00D44464 /* AirPrintANE.m */; };
+		370A976017747CDB00D44464 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 370A975F17747CDB00D44464 /* UIKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		370A974C17747C1C00D44464 /* libAirPrintANE.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAirPrintANE.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		370A974F17747C1C00D44464 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		370A975317747C1C00D44464 /* AirPrintANE-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AirPrintANE-Prefix.pch"; sourceTree = "<group>"; };
+		370A975517747C1C00D44464 /* AirPrintANE.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AirPrintANE.m; sourceTree = "<group>"; };
+		370A975F17747CDB00D44464 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		370A974917747C1C00D44464 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				370A976017747CDB00D44464 /* UIKit.framework in Frameworks */,
+				370A975017747C1C00D44464 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		370A974117747C1C00D44464 = {
+			isa = PBXGroup;
+			children = (
+				370A975117747C1C00D44464 /* AirPrintANE */,
+				370A974E17747C1C00D44464 /* Frameworks */,
+				370A974D17747C1C00D44464 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		370A974D17747C1C00D44464 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				370A974C17747C1C00D44464 /* libAirPrintANE.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		370A974E17747C1C00D44464 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				370A975F17747CDB00D44464 /* UIKit.framework */,
+				370A974F17747C1C00D44464 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		370A975117747C1C00D44464 /* AirPrintANE */ = {
+			isa = PBXGroup;
+			children = (
+				370A975517747C1C00D44464 /* AirPrintANE.m */,
+				370A975217747C1C00D44464 /* Supporting Files */,
+			);
+			path = AirPrintANE;
+			sourceTree = "<group>";
+		};
+		370A975217747C1C00D44464 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				370A975317747C1C00D44464 /* AirPrintANE-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		370A974A17747C1C00D44464 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		370A974B17747C1C00D44464 /* AirPrintANE */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 370A975917747C1C00D44464 /* Build configuration list for PBXNativeTarget "AirPrintANE" */;
+			buildPhases = (
+				370A974817747C1C00D44464 /* Sources */,
+				370A974917747C1C00D44464 /* Frameworks */,
+				370A974A17747C1C00D44464 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AirPrintANE;
+			productName = AirPrintANE;
+			productReference = 370A974C17747C1C00D44464 /* libAirPrintANE.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		370A974317747C1C00D44464 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "Bayinteractive Inc.";
+			};
+			buildConfigurationList = 370A974617747C1C00D44464 /* Build configuration list for PBXProject "AirPrintANE" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 370A974117747C1C00D44464;
+			productRefGroup = 370A974D17747C1C00D44464 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				370A974B17747C1C00D44464 /* AirPrintANE */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		370A974817747C1C00D44464 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				370A975617747C1C00D44464 /* AirPrintANE.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		370A975717747C1C00D44464 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		370A975817747C1C00D44464 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		370A975A17747C1C00D44464 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/AirPrintANE.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AirPrintANE/AirPrintANE-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		370A975B17747C1C00D44464 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/AirPrintANE.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AirPrintANE/AirPrintANE-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		370A974617747C1C00D44464 /* Build configuration list for PBXProject "AirPrintANE" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				370A975717747C1C00D44464 /* Debug */,
+				370A975817747C1C00D44464 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		370A975917747C1C00D44464 /* Build configuration list for PBXNativeTarget "AirPrintANE" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				370A975A17747C1C00D44464 /* Debug */,
+				370A975B17747C1C00D44464 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 370A974317747C1C00D44464 /* Project object */;
+}

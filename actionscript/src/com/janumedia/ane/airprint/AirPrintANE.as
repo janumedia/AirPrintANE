@@ -23,7 +23,11 @@ package com.janumedia.ane.airprint
 				trace (this, e.message, e.errorID);
 			}
 		}
-		
+
+		public static function isSupported():Boolean{
+			return true;
+		}
+
 		private function onStatus(e:StatusEvent):void 
 		{
 			if (hasEventListener (StatusEvent.STATUS))

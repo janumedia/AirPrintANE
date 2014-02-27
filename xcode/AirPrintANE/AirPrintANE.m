@@ -12,10 +12,24 @@
 FREContext * context = nil;
 NSString * event_print_complete = @"print_complete";
 NSString * event_print_error = @"print_error";
+NSString * PRINT_OUT_PHOTO = @"print_out_photo";
+NSString * PRINT_OUT_DOCUMENT = @"print_out_document";
+NSString * PRINT_OUT_GRAYSCALE = @"print_out_grayscale";
+NSString * PRINT_ORIENT_PORTRAIT = @"print_orient_portrait";
+NSString * PRINT_ORIENT_LANDSCAPE = @"print_orient_landscape";
 
 FREObject printBitmapData (FREContext ctx, void* funcData, uint32_t argc, FREObject argv[]) {
     
     context = ctx;
+    
+    uint32_t string1Length;
+    const uint8_t *string1;
+    uint32_t string2Length;
+    const uint8_t *string2;
+    FREGetObjectAsUTF8(argv[1], &string1Length, &string1);
+    FREGetObjectAsUTF8(argv[2], &string2Length, &string2);
+    NSString *printTypeStr = [NSString stringWithUTF8String:(char*)string1];
+    NSString *printOrientStr = [NSString stringWithUTF8String:(char*)string2];
     
     FREBitmapData bitmapData;
     //BitmapData to CGImageRef from http://forums.adobe.com/message/4201451
@@ -55,8 +69,26 @@ FREObject printBitmapData (FREContext ctx, void* funcData, uint32_t argc, FREObj
     UIPrintInteractionController *printerController = [UIPrintInteractionController sharedPrintController];
     
     UIPrintInfo *printInfo = [UIPrintInfo printInfo];
-    printInfo.outputType = UIPrintInfoOutputPhoto;
-    printInfo.jobName = [NSString stringWithFormat:@""];
+    // out put type
+    if ([printTypeStr isEqualToString:PRINT_OUT_DOCUMENT])
+    {
+        printInfo.outputType = UIPrintInfoOutputGeneral;
+    } else if ([printTypeStr isEqualToString:PRINT_OUT_GRAYSCALE])
+        printInfo.outputType = UIPrintInfoOutputGrayscale;
+    else 
+    {
+        printInfo.outputType = UIPrintInfoOutputPhoto;
+    }
+    // orientation
+    if ([printTypeStr isEqualToString:PRINT_ORIENT_LANDSCAPE])
+    {
+        printInfo.orientation = UIPrintInfoOrientationLandscape;
+    } else
+    {
+        printInfo.orientation = UIPrintInfoOrientationPortrait;
+    }
+    
+    printInfo.jobName = [NSString stringWithFormat:@"airprintANE"];
     printInfo.duplex = UIPrintInfoDuplexLongEdge;
     
     printerController.printInfo = printInfo;
@@ -84,6 +116,7 @@ FREObject printBitmapData (FREContext ctx, void* funcData, uint32_t argc, FREObj
     
     return NULL;
 }
+
 
 void AIRPrintANEContextInitializer(void* extData, const uint8_t* ctxType, FREContext ctx,
                                    uint32_t* numFunctionsToTest, const FRENamedFunction** functionsToSet) {

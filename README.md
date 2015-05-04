@@ -1,7 +1,7 @@
 Air Print Native Extension for iOS
 ======================================
 
-AirPrintANE version 1.0.1 enable print bitmapData using iOS Air Print.
+AirPrintANE version 1.1.0 enable print bitmapData using iOS Air Print.
 
 Extension ID
 ---------
@@ -15,7 +15,7 @@ Usage
 
 ```
 var airPrintAne:AirPrintANE = new AirPrintANE ();
-airPrintAne.printBitmapData (bitmapData, AirPrintANE.PRINT_OUT_DOCUMENT, AirPrintANE.PRINT_ORIENT_PORTRAIT);
+airPrintAne.printBitmapData (bitmapData, AirPrintANE.PRINT_OUT_DOCUMENT, AirPrintANE.PRINT_ORIENT_PORTRAIT, posX, posY);
 ```
 
 Author

@@ -15,7 +15,7 @@ Usage
 
 ```
 var airPrintAne:AirPrintANE = new AirPrintANE ();
-airPrinterAne.addEventListener(StatusEvent.STATUS, onAirPrintStatus);
+airPrintAne.addEventListener(StatusEvent.STATUS, onAirPrintStatus);
 airPrintAne.printBitmapData (bitmapData, AirPrintANE.PRINT_OUT_DOCUMENT, AirPrintANE.PRINT_ORIENT_PORTRAIT, posX, posY);
 
 // get current version

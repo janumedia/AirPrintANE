@@ -8,13 +8,20 @@ package com.janumedia.ane.airprint
 	
 	public class AirPrintANE extends EventDispatcher
 	{
-		public static const PRINT_OUT_PHOTO:String = "print_out_photo";
+		// print setup
+        public static const PRINT_OUT_PHOTO:String = "print_out_photo";
 		public static const PRINT_OUT_DOCUMENT:String = "print_out_document";
 		public static const PRINT_OUT_GRAYSCALE:String = "print_out_grayscale";
 		public static const PRINT_ORIENT_PORTRAIT:String = "print_orient_portrait";
 		public static const PRINT_ORIENT_LANDSCAPE:String = "print_orient_landscape";
 		
-		private static const EXTENSION_ID:String = "com.janumedia.ane.AirPrintANE";
+        // print event status
+        public static const PRINT_STATUS_COMPLETE:String = "print_complete";
+        public static const PRINT_STATUS_CANCELED:String = "print_canceled";
+        public static const PRINT_STATUS_ERROR:String = "print_error";
+        
+		// extension ID
+        private static const EXTENSION_ID:String = "com.janumedia.ane.AirPrintANE";
 		
 		private var context:ExtensionContext;
 		

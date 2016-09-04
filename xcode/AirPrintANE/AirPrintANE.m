@@ -10,8 +10,9 @@
 #import "FlashRuntimeExtensions.h"
 
 FREContext * context = nil;
-NSString * VERSION = @"1.1.0";
+NSString * VERSION = @"1.1.1";
 NSString * event_print_complete = @"print_complete";
+NSString * event_print_canceled = @"print_canceled";
 NSString * event_print_error = @"print_error";
 NSString * PRINT_OUT_PHOTO = @"print_out_photo";
 NSString * PRINT_OUT_DOCUMENT = @"print_out_document";
@@ -116,13 +117,20 @@ FREObject printBitmapData (FREContext ctx, void* funcData, uint32_t argc, FREObj
         
         // dispatch to ActionScript
         void (^completionHandler)(UIPrintInteractionController *, BOOL, NSError *) = ^(UIPrintInteractionController *printController, BOOL completed, NSError *error) {
+            // print error
             if (!completed && error) {
                 NSString *errorStr = [NSString stringWithFormat:@"Failed! due to error in domain %@ with error code %lu ", error.domain, (long)error.code];
                 FREDispatchStatusEventAsync(context, (uint8_t*)[event_print_error UTF8String], (uint8_t*) (uint8_t*)[errorStr UTF8String]);
+            // print completed
+            } else if(completed)
+            {
+                //NSString *successStr = [NSString stringWithFormat:@"Success!"];
+                FREDispatchStatusEventAsync(context, (uint8_t*)[event_print_complete UTF8String], (uint8_t*) (uint8_t*)[@"Print Success" UTF8String]);
+            // print canceled
             } else
             {
-                NSString *successStr = [NSString stringWithFormat:@"Success!"];
-                FREDispatchStatusEventAsync(context, (uint8_t*)[event_print_complete UTF8String], (uint8_t*) (uint8_t*)[successStr UTF8String]);
+                //NSString *successStr = [NSString stringWithFormat:@"Canceled!"];
+                FREDispatchStatusEventAsync(context, (uint8_t*)[event_print_canceled UTF8String], (uint8_t*) (uint8_t*)[@"Print Canceled" UTF8String]);
             }
         };
         
